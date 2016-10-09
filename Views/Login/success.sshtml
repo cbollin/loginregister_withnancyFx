@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
+         <link rel="stylesheet" href="Content/style.css"/>
+         <title>L&R</title>
+    </head>
+    <body>
+        <center>
+            <h1>Welcome to L&R</h1>
+            <form action="/clear" method="post">
+                <input id="logoutButton" type="submit" value="Logout"/>
+            </form>
+            <p>@ViewBag.showusers</p>
+
+        </center>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "buildOptions": {
+    "debugType": "portable",
+    "emitEntryPoint": true,
+    "copyToOutput": ["Views/Login/*", "Content/*"]
+  },
+
+  "dependencies": {
+    "CryptoHelper": "2.0.0",
+    "MySqlConnector": "0.1.0-alpha12",
+    "Newtonsoft.Json": "9.0.1",
+    "Microsoft.Extensions.Logging.Console": "1.0.0",
+    "Microsoft.NETCore.App": {
+      "version": "1.0.0",
+      "type": "platform"
+    },
+
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
+    "Microsoft.AspNetCore.Owin": "1.0.0",
+    "Nancy": "2.0.0-barneyrubble",
+    "Microsoft.Extensions.Logging.Console": "1.0.0",
+    "Nancy.Session.InMemory": "0.9.1-pre",  
+    "Nancy.Session.Persistable": "0.9.1-pre", 
+    "FSharp.Core": "4.0.1.7-alpha"
+  },
+
+  "frameworks": {
+    "netcoreapp1.0": {
+       "dependencies": {
+         "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.0.0"
+       }
+    },
+
+    "imports": "dnxcore50"
+    
+    }
+  }
+}
