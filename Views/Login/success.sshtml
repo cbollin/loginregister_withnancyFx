@@ -13,6 +13,7 @@
                 <input id="logoutButton" type="submit" value="Logout"/>
             </form>
             <p>@ViewBag.showusers</p>
+            @ViewBag.Name
 
         </center>
     </body>

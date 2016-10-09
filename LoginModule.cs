@@ -32,12 +32,21 @@ namespace login1
                 string Email = Request.Form["email"];
                 string Password = Request.Form["password"];
                 string Hash = Crypto.HashPassword(Password);
+
                 if(FirstName.Length > 2 && LastName.Length > 2 && Email.Length > 6 && Password.Length >= 8){
                     //sending the information to our database
                     string query = $"INSERT INTO users (first_name, last_name, email, hash, created_at) VALUES('{FirstName}', '{LastName}', '{Email}','{Hash}', NOW())";
                     DbConnector.ExecuteQuery(query);
                     Console.WriteLine("success");
                     @ViewBag.error = false;
+
+                    //testing sessions
+                    // string query2 = $"SELECT users WHERE first_name = {FirstName}";
+                    // DbConnector.ExecuteQuery(query2);
+                    // Session["user"] = FirstName;
+                    // ViewBag.Name = "user";
+
+
                     //render the success page
                     return Response.AsRedirect("/success");
                 }
@@ -46,6 +55,7 @@ namespace login1
                 return View["index.sshtml"];
 
             });
+
             Post("/login", args =>
             {
                 //show all the registered users
@@ -90,7 +100,7 @@ namespace login1
             });
             Post("/clear", args =>
             {
-               Session.DeleteAll();
+            //    Session.DeleteAll();
                return Response.AsRedirect("/");
             });
         }
