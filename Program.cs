@@ -72,11 +72,6 @@ namespace login1
         }
         public static void Main(string[] args)
         {
-            // Create();
-            // Read();
-            // Update();
-            // Destroy();
-
             IWebHost host = new WebHostBuilder()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseKestrel()
